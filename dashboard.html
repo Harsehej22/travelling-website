@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Travel Site</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="FEE PROJECT.HTML#home" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+      <a href="FEE PROJECT.HTML#home">home</a>
+      <a href="packages.html">packages</a>
+      <a href="services.html">services</a>
+      <a href="gallery.html">gallery</a>
+      <a href="review.html">review</a>
+      <a href="contact.html">contact</a>
+    </nav>
+    <div class="icons">
+      <i class="fas fa-moon" id="theme-toggle" aria-label="Toggle dark mode"></i>
+    </div>
+  </header>
+
+  <div class="breadcrumb"><a href="FEE PROJECT.HTML#home">Home</a><span class="sep">/</span><span>Dashboard</span></div>
+
+  <section class="services" style="padding-top: 1rem;">
+    <h1 class="heading">
+      <span>d</span><span>a</span><span>s</span><span>h</span><span>b</span><span>o</span><span>a</span><span>r</span><span>d</span>
+    </h1>
+
+    <div class="service-comparison" id="stats">
+      <h2>Overview</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-users"></i>
+          <h3>Total Users</h3>
+          <p id="stat-users">—</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-envelope"></i>
+          <h3>Contact Messages</h3>
+          <p id="stat-messages">—</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-ticket"></i>
+          <h3>Bookings</h3>
+          <p id="stat-bookings">—</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="service-comparison" id="messages">
+      <h2>Contact Messages</h2>
+      <div class="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Subject</th>
+              <th>Message</th>
+            </tr>
+          </thead>
+          <tbody id="messages-body">
+            <tr><td colspan="6">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="service-comparison" id="auth-hint" style="display:none;">
+      <h2>Authentication Required</h2>
+      <p>You must be logged in to view dashboard data.</p>
+      <p>Click the user icon on any page to login or sign up, then return here.</p>
+    </div>
+  </section>
+
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3 style="color: rgb(226, 13, 145);">about us</h3>
+        <p>There’s so much information out there to wade through, poor quality recommendations mixed in with good, and it’s hard to know who to trust in an era of AI and fake reviews.</p>
+      </div>
+      <div class="box">
+        <h3 style="color: rgb(226, 13, 145);">branch location</h3>
+        <a href="#">india</a>
+      </div>
+      <div class="box">
+        <h3 style="color: rgb(226, 13, 145);">quick links</h3>
+        <a href="FEE PROJECT.HTML#home">home</a>
+        <a href="packages.html">packages</a>
+        <a href="services.html">services</a>
+        <a href="gallery.html">gallery</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+      </div>
+    </div>
+    <h1 class="credit">created by <span> Harsehej harman harshit</span> All rights reserved</h1>
+  </section>
+
+  <script>
+    const API_BASE_URL = window.location.origin;
+
+    async function fetchWithAuth(url) {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        console.error('No authentication token found');
+        throw new Error('NO_TOKEN');
+      }
+      
+      console.log('Fetching:', url);
+      const fullUrl = url.startsWith('http') ? url : `${API_BASE_URL}${url}`;
+      
+      try {
+        const res = await fetch(fullUrl, { 
+          headers: { 
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          } 
+        });
+        
+        console.log('Response status:', res.status);
+        
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          console.error('API Error:', err);
+          throw new Error(err.error || (`HTTP ${res.status}: ${res.statusText}`));
+        }
+        
+        const data = await res.json();
+        console.log('Response data:', data);
+        return data;
+      } catch (error) {
+        console.error('Fetch error:', error);
+        throw error;
+      }
+    }
+
+    function formatDate(iso) {
+      try { 
+        return new Date(iso).toLocaleString(); 
+      } catch(_) { 
+        return iso || ''; 
+      }
+    }
+
+    (async () => {
+      const authHint = document.getElementById('auth-hint');
+      const messagesBody = document.getElementById('messages-body');
+      const statUsers = document.getElementById('stat-users');
+      const statMessages = document.getElementById('stat-messages');
+      const statBookings = document.getElementById('stat-bookings');
+
+      // Check if user is logged in
+      const token = localStorage.getItem('token');
+      const user = localStorage.getItem('user');
+      
+      console.log('Token exists:', !!token);
+      console.log('User data:', user);
+
+      if (!token) {
+        authHint.style.display = 'block';
+        messagesBody.innerHTML = '<tr><td colspan="6" style="color: red; font-weight: bold;">⚠️ Login required to view messages. Please login first.</td></tr>';
+        statUsers.textContent = '—';
+        statMessages.textContent = '—';
+        statBookings.textContent = '—';
+        return;
+      }
+
+      try {
+        // Dashboard stats
+        console.log('Fetching dashboard stats...');
+        const stats = await fetchWithAuth('/api/dashboard');
+        statUsers.textContent = stats.users || 0;
+        statMessages.textContent = stats.messages || 0;
+        statBookings.textContent = stats.bookings || 0;
+        console.log('Stats loaded:', stats);
+
+        // Contact messages
+        console.log('Fetching contact messages...');
+        const msgs = await fetchWithAuth('/api/contact-messages');
+        console.log('Messages received:', msgs);
+        
+        if (!Array.isArray(msgs)) {
+          console.error('Invalid response format:', msgs);
+          messagesBody.innerHTML = '<tr><td colspan="6" style="color: red;">Error: Invalid response format from server.</td></tr>';
+        } else if (msgs.length === 0) {
+          messagesBody.innerHTML = '<tr><td colspan="6" style="text-align: center; color: #666;">No messages found in database.</td></tr>';
+        } else {
+          messagesBody.innerHTML = msgs.map(m => `
+            <tr>
+              <td>${formatDate(m.createdAt)}</td>
+              <td>${m.name || ''}</td>
+              <td>${m.email || ''}</td>
+              <td>${m.phone || ''}</td>
+              <td>${m.subject || ''}</td>
+              <td style="max-width: 300px; word-wrap: break-word;">${(m.message || '').replace(/</g,'&lt;').replace(/>/g,'&gt;')}</td>
+            </tr>
+          `).join('');
+          console.log(`Displayed ${msgs.length} messages`);
+        }
+      } catch (e) {
+        console.error('Error loading dashboard:', e);
+        
+        if (e.message === 'NO_TOKEN' || e.message.includes('401') || e.message.includes('403')) {
+          authHint.style.display = 'block';
+          messagesBody.innerHTML = '<tr><td colspan="6" style="color: red; font-weight: bold;">⚠️ Authentication failed. Please login again.</td></tr>';
+          statUsers.textContent = '—';
+          statMessages.textContent = '—';
+          statBookings.textContent = '—';
+        } else if (e.message.includes('Failed to fetch') || e.message.includes('NetworkError')) {
+          messagesBody.innerHTML = '<tr><td colspan="6" style="color: red;">❌ Network error: Cannot connect to server. Make sure the server is running on port 3000.</td></tr>';
+          statUsers.textContent = '—';
+          statMessages.textContent = '—';
+          statBookings.textContent = '—';
+        } else {
+          messagesBody.innerHTML = `<tr><td colspan="6" style="color: red;">❌ Failed to load messages: ${e.message}</td></tr>`;
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
+

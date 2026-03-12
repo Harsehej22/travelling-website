@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Travel site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="FEE PROJECT.HTML#home" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+        <a href="FEE PROJECT.HTML#home">home</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html">services</a>
+        <a href="gallery.html" class="active">gallery</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn" aria-label="Open search"></i>
+        <i class="fas fa-user" id="login-btn" aria-label="Open login form"></i>
+        <i class="fas fa-moon" id="theme-toggle" aria-label="Toggle dark mode"></i>
+    </div>
+    <form action="" class="search-bar-container" role="search" aria-label="Site search">
+        <input type="search" id="search-bar" placeholder="Search here..." aria-label="Search query">
+        <label for="search-bar" class="fas fa-search" aria-hidden="true"></label>
+    </form>
+</header>
+
+<div class="breadcrumb"><a href="FEE PROJECT.HTML#home">Home</a><span class="sep">/</span><span>Gallery</span></div>
+
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3> login</h3>
+        <input type="Email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now"  class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#"> click here</a></p>
+        <p>don't have an account <a href="#"> register now</a></p>
+    </form>
+</div>
+
+<section class="gallery" id="gallery">
+    <h1 class="heading">
+        <span>g</span><span>a</span><span>l</span><span>l</span><span>e</span><span>r</span><span>y</span>
+    </h1>
+    <!-- Gallery Categories -->
+    <div class="gallery-categories">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="destinations">Destinations</button>
+        <button class="category-btn" data-category="people">People</button>
+        <button class="category-btn" data-category="nature">Nature</button>
+        <button class="category-btn" data-category="culture">Culture</button>
+    </div>
+
+    <div class="box-container">
+        <!-- Destinations -->
+        <div class="box" data-category="destinations">
+            <img src="Mumbai.webp" alt="Mumbai Cityscape" class="gallery-img">
+            <div class="content">
+                <h3>Mumbai City</h3>
+                <p>The City of Dreams - Gateway to India</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="Nathula-Pass.jpg" alt="Nathula Pass" class="gallery-img">
+            <div class="content">
+                <h3>Nathula Pass</h3>
+                <p>High altitude mountain pass in Sikkim</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="29_new.jpg" alt="Scenic Landscape" class="gallery-img">
+            <div class="content">
+                <h3>Scenic Beauty</h3>
+                <p>Breathtaking natural landscapes</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+
+        <!-- People & Culture -->
+        <div class="box" data-category="people">
+            <img src="indian-man-smiling-cheerful-expression-closeup-portrait_53876-129387.avif" alt="Smiling Indian Man" class="gallery-img">
+            <div class="content">
+                <h3>Local People</h3>
+                <p>Warm smiles and hospitality</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="people">
+            <img src="young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.avif" alt="Beautiful Woman" class="gallery-img">
+            <div class="content">
+                <h3>Travel Companions</h3>
+                <p>Making memories together</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="people">
+            <img src="young-bearded-man-with-striped-shirt_273609-5677.avif" alt="Young Man" class="gallery-img">
+            <div class="content">
+                <h3>Adventure Seekers</h3>
+                <p>Exploring the world</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+
+        <!-- Nature & Landscapes -->
+        <div class="box" data-category="nature">
+            <img src="images (5).jpg" alt="Natural Landscape" class="gallery-img">
+            <div class="content">
+                <h3>Natural Wonders</h3>
+                <p>Mother Nature's finest creations</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="images (4).jpg" alt="Mountain View" class="gallery-img">
+            <div class="content">
+                <h3>Mountain Majesty</h3>
+                <p>Peaks touching the sky</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="images (3).jpg" alt="Valley View" class="gallery-img">
+            <div class="content">
+                <h3>Valley Views</h3>
+                <p>Serene and peaceful landscapes</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+
+        <!-- More Destinations -->
+        <div class="box" data-category="destinations">
+            <img src="images (2).jpg" alt="Scenic Destination" class="gallery-img">
+            <div class="content">
+                <h3>Hidden Gems</h3>
+                <p>Off the beaten path adventures</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (1).jpg" alt="Travel Destination" class="gallery-img">
+            <div class="content">
+                <h3>Travel Dreams</h3>
+                <p>Places that inspire wanderlust</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images.jpg" alt="Beautiful Place" class="gallery-img">
+            <div class="content">
+                <h3>Beautiful Places</h3>
+                <p>Where dreams come true</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+
+        <!-- Additional Images -->
+        <div class="box" data-category="culture">
+            <img src="download (11).jpeg" alt="Cultural Heritage" class="gallery-img">
+            <div class="content">
+                <h3>Cultural Heritage</h3>
+                <p>Rich traditions and history</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="download (10).jpeg" alt="Natural Beauty" class="gallery-img">
+            <div class="content">
+                <h3>Natural Beauty</h3>
+                <p>Untouched wilderness</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="download (9).jpeg" alt="Travel Destination" class="gallery-img">
+            <div class="content">
+                <h3>Travel Destinations</h3>
+                <p>Places worth visiting</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="download (8).jpeg" alt="Landscape" class="gallery-img">
+            <div class="content">
+                <h3>Landscapes</h3>
+                <p>Nature's canvas</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="download (7).jpeg" alt="Travel Spot" class="gallery-img">
+            <div class="content">
+                <h3>Travel Spots</h3>
+                <p>Must-visit locations</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="culture">
+            <img src="download (6).jpeg" alt="Local Culture" class="gallery-img">
+            <div class="content">
+                <h3>Local Culture</h3>
+                <p>Authentic experiences</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="download (5).jpeg" alt="Scenic View" class="gallery-img">
+            <div class="content">
+                <h3>Scenic Views</h3>
+                <p>Breathtaking panoramas</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="download (4).jpeg" alt="Natural Scene" class="gallery-img">
+            <div class="content">
+                <h3>Natural Scenes</h3>
+                <p>Nature's masterpieces</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="download (3).jpeg" alt="Travel Location" class="gallery-img">
+            <div class="content">
+                <h3>Travel Locations</h3>
+                <p>Adventure awaits</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="culture">
+            <img src="download (2).jpeg" alt="Cultural Site" class="gallery-img">
+            <div class="content">
+                <h3>Cultural Sites</h3>
+                <p>Heritage and tradition</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="download (1).jpeg" alt="Beautiful Destination" class="gallery-img">
+            <div class="content">
+                <h3>Beautiful Destinations</h3>
+                <p>Places of wonder</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="download.jpeg" alt="Natural Landscape" class="gallery-img">
+            <div class="content">
+                <h3>Natural Landscapes</h3>
+                <p>Earth's beauty</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <!-- New Images Added -->
+        <div class="box" data-category="destinations">
+            <img src="1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg" alt="Amarnath Yatra Pahalgam" class="gallery-img">
+            <div class="content">
+                <h3>Amarnath Yatra</h3>
+                <p>Sacred pilgrimage in Jammu & Kashmir</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="2-gulmarg-kashmir-j_k-city-hero.jpg" alt="Gulmarg Kashmir" class="gallery-img">
+            <div class="content">
+                <h3>Gulmarg Kashmir</h3>
+                <p>Meadow of flowers in paradise</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="delhi.jpg" alt="Delhi City" class="gallery-img">
+            <div class="content">
+                <h3>Delhi</h3>
+                <p>Capital city with rich heritage</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="manali-1.jpg" alt="Manali" class="gallery-img">
+            <div class="content">
+                <h3>Manali</h3>
+                <p>Hill station in the Himalayas</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="desktop-wallpaper-gulmarg-and-near-by-gulmarg.jpg" alt="Gulmarg Scenery" class="gallery-img">
+            <div class="content">
+                <h3>Gulmarg Scenery</h3>
+                <p>Breathtaking mountain views</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="heritage">
+            <img src="Best-Heritage-Attractions-in-India-India-Gate.jpg" alt="India Gate" class="gallery-img">
+            <div class="content">
+                <h3>India Gate</h3>
+                <p>Iconic war memorial in Delhi</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="heritage">
+            <img src="somnath-temple-1-500x380.jpg" alt="Somnath Temple" class="gallery-img">
+            <div class="content">
+                <h3>Somnath Temple</h3>
+                <p>One of the 12 Jyotirlinga shrines</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="heritage">
+            <img src="Temple-in-India_600.jpg" alt="Indian Temple" class="gallery-img">
+            <div class="content">
+                <h3>Indian Temples</h3>
+                <p>Spiritual and architectural marvels</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="rajasthan-camels-desert-india.webp" alt="Rajasthan Desert" class="gallery-img">
+            <div class="content">
+                <h3>Rajasthan Desert</h3>
+                <p>Camel rides in the Thar Desert</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="nature">
+            <img src="Tea-Plantation.avif" alt="Tea Plantation" class="gallery-img">
+            <div class="content">
+                <h3>Tea Plantations</h3>
+                <p>Lush green tea gardens</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="HIFI-Imad-Clicks-Pexels-1600x900.webp" alt="Scenic Destination" class="gallery-img">
+            <div class="content">
+                <h3>Scenic Destinations</h3>
+                <p>Beautiful travel locations</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="feature-94.jpeg" alt="Travel Feature" class="gallery-img">
+            <div class="content">
+                <h3>Travel Features</h3>
+                <p>Featured destinations</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (6).jpg" alt="Travel Destination" class="gallery-img">
+            <div class="content">
+                <h3>Travel Destinations</h3>
+                <p>Explore amazing places</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (7).jpg" alt="Beautiful Place" class="gallery-img">
+            <div class="content">
+                <h3>Beautiful Places</h3>
+                <p>Stunning locations to visit</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (8).jpg" alt="Scenic View" class="gallery-img">
+            <div class="content">
+                <h3>Scenic Views</h3>
+                <p>Panoramic landscapes</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (9).jpg" alt="Travel Spot" class="gallery-img">
+            <div class="content">
+                <h3>Travel Spots</h3>
+                <p>Must-visit locations</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (10).jpg" alt="Destination" class="gallery-img">
+            <div class="content">
+                <h3>Amazing Destinations</h3>
+                <p>Discover new places</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (11).jpg" alt="Travel Location" class="gallery-img">
+            <div class="content">
+                <h3>Travel Locations</h3>
+                <p>Adventure awaits</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (12).jpg" alt="Beautiful Destination" class="gallery-img">
+            <div class="content">
+                <h3>Beautiful Destinations</h3>
+                <p>Places of wonder</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="images (13).jpg" alt="Scenic Place" class="gallery-img">
+            <div class="content">
+                <h3>Scenic Places</h3>
+                <p>Breathtaking views</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="destinations">
+            <img src="360_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg" alt="Travel Destination" class="gallery-img">
+            <div class="content">
+                <h3>Travel Adventures</h3>
+                <p>Explore the world</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+        
+        <div class="box" data-category="people">
+            <img src="bb418f170f694751586289c7b1c7010d.avif" alt="Traveler" class="gallery-img">
+            <div class="content">
+                <h3>Travelers</h3>
+                <p>People exploring the world</p>
+                <a href="#" class="btn">explore more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div class="lightbox-modal" id="lightbox-modal">
+    <span class="close-lightbox">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <button class="lightbox-nav prev" id="lightbox-prev">&#10094;</button>
+    <button class="lightbox-nav next" id="lightbox-next">&#10095;</button>
+</div>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">about us</h3>
+            <p>There’s so much information out there to wade through, poor quality recommendations mixed in with good, and it’s hard to know who to trust in an era of AI and fake reviews.</p>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">branch location</h3>
+            <a href="#">india</a>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">quick links</h3>
+            <a href="FEE PROJECT.HTML#home">home</a>
+            <a href="packages.html">packages</a>
+            <a href="services.html">services</a>
+            <a href="gallery.html">gallery</a>
+            <a href="review.html">review</a>
+            <a href="contact.html">contact</a>
+        </div>
+    </div>
+    <h1 class="credit">created by <span> Harsehej Nakul Ishika</span> All rights reserved</h1>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+

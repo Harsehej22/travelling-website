@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+    <!--font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!--custom css file link-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="home-page">
+
+<!-- header section starts -->
+ 
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#home" class="logo"><span>T</span>ravel</a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">home</a>
+       <!-- <a href="#book">book</a> -->
+        <a href="packages.html">Packages</a>
+        <a href="services.html">services</a>
+        <a href="gallery.html">gallery</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+        <a href="#travel-tools">Travel Tools</a>
+        
+
+  </nav>
+
+  <div class="icons">
+    <i class="fas fa-search" id="search-btn" aria-label="Open search"></i>
+    <i class="fas fa-user" id="login-btn" aria-label="Open login form"></i>
+    <i class="fas fa-moon" id="theme-toggle" aria-label="Toggle dark mode"></i>
+     </div>
+
+     <form action="" class="search-bar-container" role="search" aria-label="Site search">
+        <input type="search" id="search-bar" placeholder="Search here..." aria-label="Search query">
+        <label for="search-bar"class="fas fa-search" aria-hidden="true"></label>
+     </form>
+</header>
+
+<!-- header section ends -->
+
+<!-- Notification Container -->
+<div id="notification-container" class="notification-container"></div>
+
+<!-- LOGIN/SIGNUP form container -->
+
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+
+    <!-- Login Form -->
+    <form id="login-form" class="auth-form active">
+        <h3>Login</h3>
+        <input type="email" class="box" placeholder="Enter your email" required>
+        <input type="password" class="box" placeholder="Enter your password" required>
+        <input type="submit" value="Login Now" class="btn">
+        <div class="form-options">
+            <input type="checkbox" id="remember">
+            <label for="remember">Remember me</label>
+        </div>
+        <p>Forgot password? <a href="#" id="forgot-password">Click here</a></p>
+        <p>Don't have an account? <a href="#" id="show-signup">Register now</a></p>
+
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signup-form" class="auth-form">
+        <h3>Sign Up</h3>
+        <input type="text" class="box" placeholder="Full Name" required>
+        <input type="email" class="box" placeholder="Email Address" required>
+        <input type="tel" class="box" placeholder="Phone Number" required>
+        <input type="password" class="box" placeholder="Create Password" required>
+        <input type="password" class="box" placeholder="Confirm Password" required>
+        <input type="submit" value="Create Account" class="btn">
+        <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+    </form>
+</div>
+
+
+ <!-- Loading Spinner -->
+ <div id="loading-spinner" class="loading-spinner">
+    <div class="spinner"></div>
+    <p>Loading amazing destinations...</p>
+ </div>
+
+ <!--home section starts-->
+
+ <section class="home" id="home">
+
+    <div class="content">
+        <h3>Adventure is worthwhile</h3>
+        <p>Discover new places with us,adventure awaits</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+
+    <div class="video-arrows" aria-label="Video navigation">
+        <i class="fas fa-chevron-left" id="video-prev" aria-label="Previous video"></i>
+        <i class="fas fa-chevron-right" id="video-next" aria-label="Next video"></i>
+    </div>
+
+    <div class="video-container">
+        <video src="pexels_videos_2324274 (2160p).mp4" id="video-slider" loop autoplay muted aria-label="Background destination video"></video>
+    </div>
+
+ </section>
+ 
+ <a href="contact.html" class="floating-cta" aria-label="Book now">Book Now</a>
+ 
+ <!-- Travel Tools Section -->
+ <section class="travel-tools" id="travel-tools">
+    <h1 class="heading">
+        <span>t</span>
+        <span>r</span>
+        <span>a</span>
+        <span>v</span>
+        <span>e</span>
+        <span>l</span>
+        <span> </span>
+        <span>t</span>
+        <span>o</span>
+        <span>o</span>
+        <span>l</span>
+        <span>s</span>
+    </h1>
+    
+    <div class="tools-container">
+        <!-- Weather Widget -->
+        <div class="tool-box">
+            <h3><i class="fas fa-cloud-sun"></i> Weather Check</h3>
+            <div class="weather-widget">
+                <input type="text" id="city-input" placeholder="Enter city name" class="tool-input">
+                <button id="weather-btn" class="btn">Check Weather</button>
+                <div id="weather-result" class="weather-result"></div>
+            </div>
+        </div>
+
+        <!-- Currency Converter -->
+        <div class="tool-box">
+            <h3><i class="fas fa-exchange-alt"></i> Currency Converter</h3>
+            <div class="currency-converter">
+                <div class="converter-row">
+                    <input type="number" id="amount-input" placeholder="Amount" class="tool-input">
+                    <select id="from-currency" class="tool-select">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="INR" selected>INR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+                <div class="converter-row">
+                    <input type="number" id="result-amount" placeholder="Result" class="tool-input" readonly>
+                    <select id="to-currency" class="tool-select">
+                        <option value="INR" selected>INR</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                    </select>
+                </div>
+                <button id="convert-btn" class="btn">Convert</button>
+            </div>
+        </div>
+
+        <!-- Travel Calculator -->
+        <div class="tool-box">
+            <h3><i class="fas fa-calculator"></i> Travel Budget Calculator</h3>
+            <div class="budget-calculator">
+                <input type="number" id="hotel-cost" placeholder="Hotel cost per night" class="tool-input">
+                <input type="number" id="food-cost" placeholder="Food cost per day" class="tool-input">
+                <input type="number" id="transport-cost" placeholder="Transport cost per day" class="tool-input">
+                <input type="number" id="activities-cost" placeholder="Activities cost per day" class="tool-input">
+                <input type="number" id="trip-days" placeholder="Number of days" class="tool-input">
+                <button id="calculate-btn" class="btn">Calculate Total</button>
+                <div id="budget-result" class="budget-result"></div>
+            </div>
+        </div>
+    </div>
+ </section>
+ 
+ <!--
+packages, services, gallery, review, contact moved to separate pages
+--packages section starts-->
+ <section class="packages" id="packages">
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+ </h1>
+ <div class="box-container">
+    <div class="box">
+        <img src="download (2).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>mumbai</h3>
+            <p>ratings.</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 5000<span>rs7000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download.jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>rajasthan</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 8000<span>rs10000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (1).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>tamil nadu</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 7000<span>rs9000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (3).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>agra</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 5500<span>rs8000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (4).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>kolkata</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 5700<span>rs7000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (5).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>jammu and kashmir</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 4500<span>rs6600</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (6).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>kerala</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 6000<span>rs7000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (7).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>punjab</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 5000<span>rs7000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="download (8).jpeg" alt="">
+        <div class="content">
+            <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>gujrat</h3>
+            <p>Ratings</p>
+            <div class="stars">
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+              </div>
+              <div class="price">Rs 6789<span>rs8000</span></div>
+              <a href="contact.html" class="btn">book now</a>
+        </div>
+    </div>
+ </div>
+ </section>
+ <!--packages section ends-->
+
+ <a href="contact.html" class="floating-cta" aria-label="Book now">Book Now</a>
+
+ <!--service section starts-->
+ <section class="services" id="services">
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+</h1>
+<div class="box-container">
+    <div class="box">
+        <i class="fas fa-hotel"></i>
+        <h3> Affordable hotels</h3>
+        <p>Lorem, ipsum.</p>
+
+    </div>
+     <div class="box">
+         <i class="fas fa-utensils"></i>
+         <h3> food and drinks</h3>
+        <p>Lorem, ipsum.</p>
+            
+     </div>
+        
+            <div class="box">
+                <i class="fas fa-bullhorn"></i>
+                <h3>safety guide</h3>
+                <p>Lorem, ipsum.</p>
+                
+            </div>
+            
+                <div class="box">
+                    <i class="fas fa-globe-asia"></i>
+                    <h3>around the world</h3>
+                    <p>Lorem, ipsum.</p>
+                    
+                </div>
+                     <div class="box">
+                            <i class="fas fa-plane"></i>
+                            <h3>fastest travel</h3>
+                            <p>Lorem, ipsum.</p>
+                            
+                        </div>
+                        <div class="box">
+                            <i class="fas fa-hiking"></i>
+                            <h3>adventures</h3>
+                            <p>Lorem, ipsum.</p>
+                            
+                        </div>
+ </div>
+ </section>
+ <!--service section ends-->
+ <!--gallery section starts-->
+ <section class="gallery" id="gallery">
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+
+    </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="images.jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images (1).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="images (2).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="download (9).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="download (10).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="download (5).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="download (7).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box">
+            <img src="download (11).jpeg" alt="">
+            <div class="content">
+                <h3>Amazing places</h3>
+                <a href="#" class="btn">see more</a>
+            </div>
+        </div>
+
+    </div>
+ </section>
+ <!--gallery section ends-->
+ <!--review section starts-->
+ <section class="review" id="review">
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="indian-man-smiling-cheerful-expression-closeup-portrait_53876-129387.avif" alt="">
+                    <h3>john deo</h3>
+                    <p>This is an amazing site to work on and is trustable</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-stars"></i>
+
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="lady-with-brown-eyes-is-smiling-red-wall_197531-16958.avif" alt="">
+                    <h3>john deo</h3>
+                    <p>i always use this site whenever to go on holidays and always recommend my friend to use this</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-stars"></i>
+
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.avif" alt="">
+                    <h3>john deo</h3>
+                    <p>it was fun travelling with this website , the overall service provided is good</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-stars"></i>
+
+                        </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="young-bearded-man-with-striped-shirt_273609-5677.avif" alt="">
+                    <h3>john deo</h3>
+                    <p>I booked my hotels from this site and i enjoyed the services!</p>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-stars"></i>
+
+                        </div>
+                </div>
+            </div>
+            
+
+           
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+ </section>
+ 
+ <!--review section ends-->
+  <!--contact section starts-->
+  <section class="contact" id="contact">
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+
+    </h1>
+    <div class="row">
+        <form id="contact-form" action="" >
+            <div class="inputbox">
+                <input type="text" name="name" placeholder="name" required>
+                <input type="email" name="email" placeholder="email" required>
+
+            </div>
+            <div class="inputbox">
+                <input type="tel" name="number" placeholder="number">
+                <input type="text" name="subject" placeholder="subject">
+
+            </div>
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10" required></textarea>
+            <input type="submit" class="btn" value="send message">
+
+        </form>
+    </div>
+
+  </section>
+   <!--contact section ends-->
+-->
+   
+   <!--footer section-->
+   <section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">about us</h3>
+            <p>There’s so much information out there to wade through, poor quality recommendations mixed in with good, and it’s hard to know who to trust in an era of AI and fake reviews.</p>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">branch location</h3>
+            <a href="#">india</a>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">quick links</h3>
+            <a href="#">home</a>
+            <a href="#">book</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">gallery</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+
+        </div>
+    
+            <h3>follow us</h3>
+            <a href="#" style="color: aliceblue;">facebook </a>
+            <a href="#"style="color: aliceblue;">insta</a>
+            <a href="#"style="color: aliceblue;">twitter</a>
+            <a href="#"style="color: aliceblue;">linkedin</a>
+            
+
+        </div>
+    </div>
+    <h1 class="credit">created by <span> Harsehej Nakul  Ishika</span> All rights reserved</h1>
+   </section>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!--custom js file link-->
+<script src="script.js"></script>
+</body>
+</html>
