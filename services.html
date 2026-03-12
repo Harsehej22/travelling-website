@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Travel site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="FEE PROJECT.HTML#home" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+        <a href="FEE PROJECT.HTML#home">home</a>
+        <a href="packages.html">Packages</a>
+        <a href="services.html" class="active">services</a>
+        <a href="gallery.html">gallery</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn" aria-label="Open search"></i>
+        <i class="fas fa-user" id="login-btn" aria-label="Open login form"></i>
+        <i class="fas fa-moon" id="theme-toggle" aria-label="Toggle dark mode"></i>
+    </div>
+    <form action="" class="search-bar-container" role="search" aria-label="Site search">
+        <input type="search" id="search-bar" placeholder="Search here..." aria-label="Search query">
+        <label for="search-bar" class="fas fa-search" aria-hidden="true"></label>
+    </form>
+</header>
+
+<div class="breadcrumb"><a href="FEE PROJECT.HTML#home">Home</a><span class="sep">/</span><span>Services</span></div>
+
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3> login</h3>
+        <input type="Email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now"  class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#"> click here</a></p>
+        <p>don't have an account <a href="#"> register now</a></p>
+    </form>
+</div>
+
+<section class="services" id="services">
+    <h1 class="heading">
+        <span>s</span><span>e</span><span>r</span><span>v</span><span>i</span><span>c</span><span>e</span><span>s</span>
+    </h1>
+    
+    <!-- Service Categories -->
+    <div class="service-categories">
+        <button class="category-btn active" data-category="all">All Services</button>
+        <button class="category-btn" data-category="accommodation">Accommodation</button>
+        <button class="category-btn" data-category="transportation">Transportation</button>
+        <button class="category-btn" data-category="activities">Activities</button>
+        <button class="category-btn" data-category="support">Support</button>
+    </div>
+
+    <div class="box-container">
+        <!-- Accommodation Services -->
+        <div class="box" data-category="accommodation">
+            <i class="fas fa-hotel"></i>
+            <h3>Luxury Hotels & Resorts</h3>
+            <p>Experience world-class accommodations with premium amenities, spa services, and breathtaking views. From 5-star hotels to boutique resorts.</p>
+            <div class="service-features">
+                <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
+                <span><i class="fas fa-utensils"></i> Restaurant</span>
+            </div>
+            <div class="service-price">Starting from ₹8,000/night</div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+        <div class="box" data-category="accommodation">
+            <i class="fas fa-home"></i>
+            <h3>Budget-Friendly Stays</h3>
+            <p>Comfortable and clean accommodations that won't break the bank. Perfect for budget-conscious travelers who want quality experiences.</p>
+            <div class="service-features">
+                <span><i class="fas fa-bed"></i> Clean Rooms</span>
+                <span><i class="fas fa-shower"></i> Private Bath</span>
+                <span><i class="fas fa-coffee"></i> Breakfast</span>
+            </div>
+            <div class="service-price">Starting from ₹1,500/night</div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+
+        <!-- Transportation Services -->
+        <div class="box" data-category="transportation">
+            <i class="fas fa-plane"></i>
+            <h3>Flight Bookings</h3>
+            <p>Best deals on domestic and international flights with premium airlines. We handle all your travel arrangements seamlessly.</p>
+            <div class="service-features">
+                <span><i class="fas fa-clock"></i> 24/7 Support</span>
+                <span><i class="fas fa-tags"></i> Best Prices</span>
+                <span><i class="fas fa-route"></i> Flexible Routes</span>
+            </div>
+            <div class="service-price">Competitive Rates</div>
+            <a href="#" class="btn">Search Flights</a>
+        </div>
+
+        <div class="box" data-category="transportation">
+            <i class="fas fa-car"></i>
+            <h3>Car Rentals & Transfers</h3>
+            <p>Convenient transportation solutions including airport transfers, city tours, and long-distance travel with professional drivers.</p>
+            <div class="service-features">
+                <span><i class="fas fa-user-tie"></i> Professional Drivers</span>
+                <span><i class="fas fa-shield-alt"></i> Insured Vehicles</span>
+                <span><i class="fas fa-clock"></i> On-Time Service</span>
+            </div>
+            <div class="service-price">Starting from ₹500/day</div>
+            <a href="#" class="btn">Book Vehicle</a>
+        </div>
+
+        <!-- Activity Services -->
+        <div class="box" data-category="activities">
+            <i class="fas fa-hiking"></i>
+            <h3>Adventure Tours</h3>
+            <p>Thrilling outdoor adventures including trekking, camping, water sports, and wildlife safaris for adrenaline seekers.</p>
+            <div class="service-features">
+                <span><i class="fas fa-compass"></i> Expert Guides</span>
+                <span><i class="fas fa-campground"></i> Camping Gear</span>
+                <span><i class="fas fa-life-ring"></i> Safety Equipment</span>
+            </div>
+            <div class="service-price">Starting from ₹2,500</div>
+            <a href="#" class="btn">Explore Adventures</a>
+        </div>
+
+        <div class="box" data-category="activities">
+            <i class="fas fa-camera"></i>
+            <h3>Photography Tours</h3>
+            <p>Capture stunning moments with professional photography tours to the most picturesque locations around the world.</p>
+            <div class="service-features">
+                <span><i class="fas fa-user-graduate"></i> Pro Photographers</span>
+                <span><i class="fas fa-image"></i> Editing Included</span>
+                <span><i class="fas fa-download"></i> Digital Copies</span>
+            </div>
+            <div class="service-price">Starting from ₹5,000</div>
+            <a href="#" class="btn">Book Tour</a>
+        </div>
+
+        <!-- Support Services -->
+        <div class="box" data-category="support">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 Travel Support</h3>
+            <p>Round-the-clock assistance for all your travel needs. Emergency support, itinerary changes, and travel advice available anytime.</p>
+            <div class="service-features">
+                <span><i class="fas fa-phone"></i> Hotline Support</span>
+                <span><i class="fas fa-comments"></i> Live Chat</span>
+                <span><i class="fas fa-globe"></i> Multi-language</span>
+            </div>
+            <div class="service-price">Free Service</div>
+            <a href="#" class="btn">Contact Support</a>
+        </div>
+
+        <div class="box" data-category="support">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Travel Insurance</h3>
+            <p>Comprehensive travel protection covering medical emergencies, trip cancellations, lost luggage, and more for worry-free travel.</p>
+            <div class="service-features">
+                <span><i class="fas fa-heartbeat"></i> Medical Coverage</span>
+                <span><i class="fas fa-suitcase"></i> Luggage Protection</span>
+                <span><i class="fas fa-undo"></i> Trip Cancellation</span>
+            </div>
+            <div class="service-price">Starting from ₹500</div>
+            <a href="#" class="btn">Get Quote</a>
+        </div>
+        
+        <!-- Additional Services -->
+        <div class="box" data-category="accommodation">
+            <i class="fas fa-campground"></i>
+            <h3>Camping & Glamping</h3>
+            <p>Experience nature up close with our premium camping and glamping options. Perfect for adventure seekers and nature lovers.</p>
+            <div class="service-features">
+                <span><i class="fas fa-fire"></i> Campfire</span>
+                <span><i class="fas fa-tent"></i> Premium Tents</span>
+                <span><i class="fas fa-utensils"></i> Meals Included</span>
+            </div>
+            <div class="service-price">Starting from ₹2,000/night</div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+        
+        <div class="box" data-category="transportation">
+            <i class="fas fa-train"></i>
+            <h3>Train Bookings</h3>
+            <p>Book train tickets for your journey across India. We offer the best deals on all classes and routes.</p>
+            <div class="service-features">
+                <span><i class="fas fa-ticket-alt"></i> All Classes</span>
+                <span><i class="fas fa-route"></i> All Routes</span>
+                <span><i class="fas fa-clock"></i> Instant Booking</span>
+            </div>
+            <div class="service-price">Best Prices Available</div>
+            <a href="#" class="btn">Book Tickets</a>
+        </div>
+        
+        <div class="box" data-category="activities">
+            <i class="fas fa-umbrella-beach"></i>
+            <h3>Beach Activities</h3>
+            <p>Enjoy water sports, beach volleyball, sunset cruises, and more at beautiful beach destinations.</p>
+            <div class="service-features">
+                <span><i class="fas fa-swimmer"></i> Water Sports</span>
+                <span><i class="fas fa-ship"></i> Boat Rides</span>
+                <span><i class="fas fa-sun"></i> Beach Activities</span>
+            </div>
+            <div class="service-price">Starting from ₹1,500</div>
+            <a href="#" class="btn">Explore</a>
+        </div>
+        
+        <div class="box" data-category="activities">
+            <i class="fas fa-mountain"></i>
+            <h3>Trekking & Hiking</h3>
+            <p>Guided trekking and hiking tours through scenic mountain trails with experienced guides and safety equipment.</p>
+            <div class="service-features">
+                <span><i class="fas fa-route"></i> Guided Tours</span>
+                <span><i class="fas fa-first-aid"></i> Safety Gear</span>
+                <span><i class="fas fa-camera"></i> Photography</span>
+            </div>
+            <div class="service-price">Starting from ₹3,000</div>
+            <a href="#" class="btn">Book Tour</a>
+        </div>
+        
+        <div class="box" data-category="accommodation">
+            <i class="fas fa-home"></i>
+            <h3>Homestays & Villas</h3>
+            <p>Experience local culture with authentic homestays and luxury villas in beautiful locations.</p>
+            <div class="service-features">
+                <span><i class="fas fa-users"></i> Local Hosts</span>
+                <span><i class="fas fa-utensils"></i> Home Cooked Meals</span>
+                <span><i class="fas fa-heart"></i> Authentic Experience</span>
+            </div>
+            <div class="service-price">Starting from ₹2,500/night</div>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+        
+        <div class="box" data-category="support">
+            <i class="fas fa-passport"></i>
+            <h3>Visa Assistance</h3>
+            <p>Complete visa processing assistance for international travel. We handle all documentation and paperwork.</p>
+            <div class="service-features">
+                <span><i class="fas fa-file-alt"></i> Documentation</span>
+                <span><i class="fas fa-check-circle"></i> Expert Guidance</span>
+                <span><i class="fas fa-clock"></i> Fast Processing</span>
+            </div>
+            <div class="service-price">Starting from ₹2,000</div>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+        
+        <div class="box" data-category="activities">
+            <i class="fas fa-theater-masks"></i>
+            <h3>Cultural Tours</h3>
+            <p>Immerse yourself in local culture with guided tours to temples, festivals, and traditional performances.</p>
+            <div class="service-features">
+                <span><i class="fas fa-landmark"></i> Heritage Sites</span>
+                <span><i class="fas fa-music"></i> Cultural Shows</span>
+    </div>
+    
+    <div class="premium-container">
+        <div class="premium-box">
+            <div class="premium-image">
+                <img src="jet.jpg" alt="Private Jet Charter">
+                <div class="premium-overlay">
+                    <span class="premium-tag">EXCLUSIVE</span>
+                </div>
+            </div>
+            <div class="premium-content">
+                <h3><i class="fas fa-plane"></i>Private Jet Charter</h3>
+                <p>Experience ultimate luxury with private jet services. Fly in style and comfort to any destination worldwide.</p>
+                <div class="premium-features">
+                    <span><i class="fas fa-check-circle"></i> Luxury Aircraft</span>
+                    <span><i class="fas fa-check-circle"></i> Personal Crew</span>
+                    <span><i class="fas fa-check-circle"></i> Custom Schedule</span>
+                </div>
+                <div class="premium-price">
+                    <span class="price-label">Starting from</span>
+                    <span class="price-amount">₹5,00,000</span>
+                    <span class="price-unit">per flight</span>
+                </div>
+                <button class="btn premium-btn" onclick="addToCart('Private Jet Charter', 500000)">
+                    <i class="fas fa-crown"></i> Book Premium
+                </button>
+            </div>
+        </div>
+        
+        <div class="premium-box">
+            <div class="premium-image">
+                <img src="yatch.jpg" alt="Yacht Rental">
+                <div class="premium-overlay">
+                    <span class="premium-tag">LUXURY</span>
+                </div>
+            </div>
+            <div class="premium-content">
+                <h3><i class="fas fa-ship"></i>Yacht Rental</h3>
+                <p>Cruise in style with luxury yacht rentals. Perfect for special occasions and exclusive getaways.</p>
+                <div class="premium-features">
+                    <span><i class="fas fa-check-circle"></i> Captain & Crew</span>
+                    <span><i class="fas fa-check-circle"></i> Gourmet Dining</span>
+                    <span><i class="fas fa-check-circle"></i> Water Sports</span>
+                </div>
+                <div class="premium-price">
+                    <span class="price-label">Starting from</span>
+                    <span class="price-amount">₹1,50,000</span>
+                    <span class="price-unit">per day</span>
+                </div>
+                <button class="btn premium-btn" onclick="addToCart('Yacht Rental', 150000)">
+                    <i class="fas fa-crown"></i> Book Premium
+                </button>
+            </div>
+        </div>
+        
+        <div class="premium-box">
+            <div class="premium-image">
+                <img src="helicopter.jpg" alt="Helicopter Tour">
+                <div class="premium-overlay">
+                    <span class="premium-tag">ADVENTURE</span>
+                </div>
+            </div>
+            <div class="premium-content">
+                <h3><i class="fas fa-helicopter"></i>Helicopter Tours</h3>
+                <p>See the world from above with exclusive helicopter tours. Experience breathtaking views and unforgettable moments.</p>
+                <div class="premium-features">
+                    <span><i class="fas fa-check-circle"></i> Expert Pilot</span>
+                    <span><i class="fas fa-check-circle"></i> Scenic Routes</span>
+                    <span><i class="fas fa-check-circle"></i> Photography</span>
+                </div>
+                <div class="premium-price">
+                    <span class="price-label">Starting from</span>
+                    <span class="price-amount">₹25,000</span>
+                    <span class="price-unit">per hour</span>
+                </div>
+                <button class="btn premium-btn" onclick="addToCart('Helicopter Tours', 25000)">
+                    <i class="fas fa-crown"></i> Book Premium
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Service Comparison Table -->
+    <div class="service-comparison">
+        <h2>Service Comparison</h2>
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Basic</th>
+                        <th>Premium</th>
+                        <th>Luxury</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Accommodation</td>
+                        <td>3-Star Hotels</td>
+                        <td>4-Star Hotels</td>
+                        <td>5-Star Resorts</td>
+                    </tr>
+                    <tr>
+                        <td>Transportation</td>
+                        <td>Public Transport</td>
+                        <td>Private Car</td>
+                        <td>Luxury Vehicle</td>
+                    </tr>
+                    <tr>
+                        <td>Guides</td>
+                        <td>Local Guide</td>
+                        <td>Experienced Guide</td>
+                        <td>Expert Guide</td>
+                    </tr>
+                    <tr>
+                        <td>Support</td>
+                        <td>Email Support</td>
+                        <td>Phone Support</td>
+                        <td>24/7 Dedicated</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Why Choose Us Section -->
+    <div class="why-choose-us">
+        <h2>Why Choose Our Services?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-award"></i>
+                <h3>Best Price Guarantee</h3>
+                <p>We guarantee the best prices for all our services. If you find a better deal, we'll match it!</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
+                <p>Your personal and payment information is always protected with our secure booking system.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is available round the clock to assist you with any queries.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Cancellation</h3>
+                <p>Flexible cancellation policies that allow you to change or cancel your bookings easily.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-star"></i>
+                <h3>Verified Reviews</h3>
+                <p>All our reviews are verified from real customers who have used our services.</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-globe"></i>
+                <h3>Wide Coverage</h3>
+                <p>We offer services across multiple destinations in India and around the world.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <div class="service-testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Excellent service! The team helped me plan the perfect vacation. Everything was well-organized and exceeded my expectations."</p>
+                    <div class="testimonial-author">
+                        <strong>Priya Sharma</strong>
+                        <span>Delhi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Best travel website I've ever used. Great prices, smooth booking process, and amazing customer support. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <strong>Rahul Mehta</strong>
+                        <span>Mumbai</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"The travel insurance and support services are top-notch. I felt safe and secure throughout my journey. Thank you!"</p>
+                    <div class="testimonial-author">
+                        <strong>Anita Patel</strong>
+                        <span>Ahmedabad</span>
+                    </div>
+                </div>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-undo"></i>
+            <h3>Easy Cancellation</h3>
+            <p>Flexible cancellation policies that allow you to change or cancel your bookings easily.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-star"></i>
+            <h3>Verified Reviews</h3>
+            <p>All our reviews are verified from real customers who have used our services.</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-globe"></i>
+            <h3>Wide Coverage</h3>
+            <p>We offer services across multiple destinations in India and around the world.</p>
+        </div>
+    </div>
+</div>
+    
+<!-- Testimonials Section -->
+<div class="service-testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+        <div class="testimonial-item">
+            <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"Excellent service! The team helped me plan the perfect vacation. Everything was well-organized and exceeded my expectations."</p>
+                <div class="testimonial-author">
+                    <strong>Priya Sharma</strong>
+                    <span>Delhi</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item">
+            <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"Best travel website I've ever used. Great prices, smooth booking process, and amazing customer support. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <strong>Rahul Mehta</strong>
+                    <span>Mumbai</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-item">
+            <div class="testimonial-content">
+                <i class="fas fa-quote-left"></i>
+                <p>"The travel insurance and support services are top-notch. I felt safe and secure throughout my journey. Thank you!"</p>
+                <div class="testimonial-author">
+                    <strong>Anita Patel</strong>
+                    <span>Ahmedabad</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">about us</h3>
+            <p>There’s so much information out there to wade through, poor quality recommendations mixed in with good, and it’s hard to know who to trust in an era of AI and fake reviews.</p>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">branch location</h3>
+            <a href="#">india</a>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">quick links</h3>
+            <a href="FEE PROJECT.HTML#home">home</a>
+            <a href="packages.html">packages</a>
+            <a href="services.html">services</a>
+            <a href="gallery.html">gallery</a>
+            <a href="review.html">review</a>
+            <a href="contact.html">contact</a>
+        </div>
+    </div>
+    <h1 class="credit">created by <span> Harsehej Nakul Ishika</span> All rights reserved</h1>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
