@@ -1,0 +1,18 @@
+{
+  "mongoDB": {
+    "connectionString": "mongodb://localhost:27017/travel_site",
+    "options": {
+      "useNewUrlParser": true,
+      "useUnifiedTopology": true
+    }
+  },
+  "jwt": {
+    "secret": "your-secret-key-change-in-production-make-it-long-and-random",
+    "expiresIn": "24h"
+  },
+  "server": {
+    "port": 3000
+  }
+}
+
+
