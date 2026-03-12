@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - Travel site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <a href="FEE PROJECT.HTML#home" class="logo"><span>T</span>ravel</a>
+    <nav class="navbar">
+        <a href="FEE PROJECT.HTML#home">home</a>
+        <a href="packages.html" class="active">Packages</a>
+        <a href="services.html">services</a>
+        <a href="gallery.html">gallery</a>
+        <a href="review.html">review</a>
+        <a href="contact.html">contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn" aria-label="Open search"></i>
+        <i class="fas fa-user" id="login-btn" aria-label="Open login form"></i>
+        <i class="fas fa-moon" id="theme-toggle" aria-label="Toggle dark mode"></i>
+    </div>
+    <form action="" class="search-bar-container" role="search" aria-label="Site search">
+        <input type="search" id="search-bar" placeholder="Search here..." aria-label="Search query">
+        <label for="search-bar" class="fas fa-search" aria-hidden="true"></label>
+    </form>
+</header>
+
+<div class="breadcrumb"><a href="FEE PROJECT.HTML#home">Home</a><span class="sep">/</span><span>Packages</span></div>
+
+<div class="login-form-container">
+    <i class="fas fa-times" id="form-close"></i>
+    <form action="">
+        <h3> login</h3>
+        <input type="Email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now"  class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#"> click here</a></p>
+        <p>don't have an account <a href="#"> register now</a></p>
+    </form>
+    </div>
+
+<section class="packages" id="packages">
+    <h1 class="heading">
+        <span>p</span><span>a</span><span>c</span><span>k</span><span>a</span><span>g</span><span>e</span><span>s</span>
+    </h1>
+    <div class="filters">
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="pkg-search" placeholder="Search destinations, tags..." />
+        </div>
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="beach">Beach</button>
+        <button class="chip" data-filter="mountain">Mountain</button>
+        <button class="chip" data-filter="city">City</button>
+        <button class="chip" data-filter="heritage">Heritage</button>
+    </div>
+    <div class="box-container">
+        
+        <div class="box amazon-style">
+            <img src="download (2).jpeg" alt="Mumbai Package">
+            <div class="content" data-tags="city heritage" data-title="mumbai">
+                <div class="package-header">
+                    <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Mumbai</h3>
+                    <div class="prime-badge"><i class="fas fa-bolt"></i> Premium</div>
+                </div>
+                <div class="meta"><span class="tag">City</span><span class="tag">Heritage</span><span class="badge">4N/5D</span></div>
+                <p>A vibrant city package incl. city tour, street food walk, and museum passes.</p>
+                <div class="highlights">
+                    <span><i class="fas fa-check"></i> Hotel Included</span>
+                    <span><i class="fas fa-check"></i> Meals</span>
+                    <span><i class="fas fa-check"></i> Transport</span>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <span class="rating-count">(245 reviews)</span>
+                </div>
+                <div class="price-section">
+                    <div class="price">Rs 5000<span class="original-price">Rs 7000</span></div>
+                    <span class="discount">28% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn add-to-cart" onclick="addToCart('Mumbai', 5000)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn buy-now" onclick="buyNow('Mumbai', 5000)">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="box amazon-style">
+            <img src="download.jpeg" alt="Rajasthan Package">
+            <div class="content" data-tags="heritage desert" data-title="rajasthan">
+                <div class="package-header">
+                    <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Rajasthan</h3>
+                    <div class="prime-badge"><i class="fas fa-crown"></i> Luxury</div>
+                </div>
+                <div class="meta"><span class="tag">Heritage</span><span class="tag">Desert</span><span class="badge">5N/6D</span></div>
+                <p>Palace stays, camel safari, and fort tours in Jaipur–Jaisalmer.</p>
+                <div class="highlights">
+                    <span><i class="fas fa-check"></i> Palace Hotel</span>
+                    <span><i class="fas fa-check"></i> All Meals</span>
+                    <span><i class="fas fa-check"></i> Guide</span>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="fas fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <i class="far fa-star" style="color: rgb(226, 45, 13);"></i>
+                    <span class="rating-count">(189 reviews)</span>
+                </div>
+                <div class="price-section">
+                    <div class="price">Rs 8000<span class="original-price">Rs 10000</span></div>
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn add-to-cart" onclick="addToCart('Rajasthan', 8000)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn buy-now" onclick="buyNow('Rajasthan', 8000)">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box amazon-style">
+            <img src="download (3).jpeg" alt="Agra Package">
+            <div class="content" data-tags="heritage" data-title="agra">
+                <div class="package-header">
+                    <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Agra</h3>
+                    <div class="prime-badge"><i class="fas fa-gem"></i> Popular</div>
+                </div>
+                <div class="meta"><span class="tag">Heritage</span><span class="badge">2N/3D</span></div>
+                <p>Taj Mahal sunrise, Agra Fort, local crafts and sweets tasting.</p>
+                <div class="highlights">
+                    <span><i class="fas fa-check"></i> 3* Hotel</span>
+                    <span><i class="fas fa-check"></i> Breakfast</span>
+                    <span><i class="fas fa-check"></i> Transport</span>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="rating-count">(412 reviews)</span>
+                </div>
+                <div class="price-section">
+                    <div class="price">Rs 5500<span class="original-price">Rs 8000</span></div>
+                    <span class="discount">31% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn add-to-cart" onclick="addToCart('Agra', 5500)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn buy-now" onclick="buyNow('Agra', 5500)">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box amazon-style">
+            <img src="download (6).jpeg" alt="Kerala Package">
+            <div class="content" data-tags="mountain" data-title="kerala backwaters">
+                <div class="package-header">
+                    <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Kerala Backwaters</h3>
+                    <div class="prime-badge"><i class="fas fa-leaf"></i> Nature</div>
+                </div>
+                <div class="meta"><span class="tag">Mountain</span><span class="badge">4N/5D</span></div>
+                <p>Houseboat stay, tea gardens, spice plantation and ayurvedic spa.</p>
+                <div class="highlights">
+                    <span><i class="fas fa-check"></i> Houseboat</span>
+                    <span><i class="fas fa-check"></i> All Meals</span>
+                    <span><i class="fas fa-check"></i> Spa</span>
+                </div>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <span class="rating-count">(328 reviews)</span>
+                </div>
+                <div class="price-section">
+                    <div class="price">Rs 6000<span class="original-price">Rs 7000</span></div>
+                    <span class="discount">14% OFF</span>
+                </div>
+                <div class="action-buttons">
+                    <button class="btn add-to-cart" onclick="addToCart('Kerala Backwaters', 6000)">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                    <button class="btn buy-now" onclick="buyNow('Kerala Backwaters', 6000)">
+                        <i class="fas fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Packages Added -->
+        <div class="box">
+            <img src="1-amarnath-yatra-pahalgam-jammu-kashmir-city-hero.jpg" alt="">
+            <div class="content" data-tags="mountain heritage" data-title="amarnath yatra">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Amarnath Yatra</h3>
+                <div class="meta"><span class="tag">Mountain</span><span class="tag">Heritage</span><span class="badge">7N/8D</span></div>
+                <p>Sacred pilgrimage to Amarnath Cave in Jammu & Kashmir with breathtaking mountain views.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <div class="price">Rs 12000<span>rs15000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="2-gulmarg-kashmir-j_k-city-hero.jpg" alt="">
+            <div class="content" data-tags="mountain" data-title="gulmarg">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Gulmarg Kashmir</h3>
+                <div class="meta"><span class="tag">Mountain</span><span class="badge">3N/4D</span></div>
+                <p>Meadow of flowers with gondola rides, skiing, and stunning Himalayan views.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 9000<span>rs11000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="delhi.jpg" alt="">
+            <div class="content" data-tags="city heritage" data-title="delhi">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Delhi</h3>
+                <div class="meta"><span class="tag">City</span><span class="tag">Heritage</span><span class="badge">3N/4D</span></div>
+                <p>Explore India Gate, Red Fort, Qutub Minar, and rich Mughal heritage.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 5500<span>rs7000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="manali-1.jpg" alt="">
+            <div class="content" data-tags="mountain" data-title="manali">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Manali</h3>
+                <div class="meta"><span class="tag">Mountain</span><span class="badge">4N/5D</span></div>
+                <p>Adventure capital with paragliding, river rafting, and snow-capped peaks.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 7000<span>rs9000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="rajasthan-camels-desert-india.webp" alt="">
+            <div class="content" data-tags="heritage desert" data-title="rajasthan desert">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Rajasthan Desert Safari</h3>
+                <div class="meta"><span class="tag">Heritage</span><span class="tag">Desert</span><span class="badge">2N/3D</span></div>
+                <p>Camel safari, desert camping, folk music, and traditional Rajasthani cuisine.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 4500<span>rs6000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="somnath-temple-1-500x380.jpg" alt="">
+            <div class="content" data-tags="heritage" data-title="somnath">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Somnath Temple</h3>
+                <div class="meta"><span class="tag">Heritage</span><span class="badge">2N/3D</span></div>
+                <p>Spiritual journey to one of the 12 Jyotirlinga shrines with beach views.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 4000<span>rs5500</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="Tea-Plantation.avif" alt="">
+            <div class="content" data-tags="mountain" data-title="tea plantation">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Tea Plantation Tour</h3>
+                <div class="meta"><span class="tag">Mountain</span><span class="badge">3N/4D</span></div>
+                <p>Experience tea gardens, plantation tours, and serene hill station beauty.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 6500<span>rs8000</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="Best-Heritage-Attractions-in-India-India-Gate.jpg" alt="">
+            <div class="content" data-tags="city heritage" data-title="delhi heritage">
+                <h3><i class="fas fa-map-marker-alt" style="color: rgb(238, 117, 47);"></i>Delhi Heritage Walk</h3>
+                <div class="meta"><span class="tag">City</span><span class="tag">Heritage</span><span class="badge">2N/3D</span></div>
+                <p>Heritage tour covering India Gate, monuments, and historical landmarks.</p>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                <div class="price">Rs 5000<span>rs6500</span></div>
+                <a href="contact.html" class="btn">book now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Shopping Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+        <button class="close-cart" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+        <p class="empty-cart">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">Rs 0</span>
+        </div>
+        <button class="btn checkout-btn" onclick="checkout()">
+            <i class="fas fa-credit-card"></i> Proceed to Checkout
+        </button>
+    </div>
+</div>
+
+<!-- Related Products Section -->
+<section class="related-products" id="related-products">
+    <h2 class="section-title">
+        <span>Related</span><span>Products</span>
+    </h2>
+    <div class="related-container">
+        <div class="related-box">
+            <img src="2-gulmarg-kashmir-j_k-city-hero.jpg" alt="Gulmarg Skiing">
+            <div class="related-content">
+                <h4>Gulmarg Adventure</h4>
+                <div class="related-price">Rs 4500 <span>Rs 6000</span></div>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <small>(89 reviews)</small>
+                </div>
+                <button class="btn related-btn" onclick="addToCart('Gulmarg Adventure', 4500)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="related-box">
+            <img src="Nathula-Pass.jpg" alt="Nathula Pass">
+            <div class="related-content">
+                <h4>Nathula Pass Tour</h4>
+                <div class="related-price">Rs 3500 <span>Rs 5000</span></div>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <small>(156 reviews)</small>
+                </div>
+                <button class="btn related-btn" onclick="addToCart('Nathula Pass Tour', 3500)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="related-box">
+            <img src="delhi.jpg" alt="Delhi Tour">
+            <div class="related-content">
+                <h4>Delhi Heritage Walk</h4>
+                <div class="related-price">Rs 2500 <span>Rs 4000</span></div>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <small>(203 reviews)</small>
+                </div>
+                <button class="btn related-btn" onclick="addToCart('Delhi Heritage Walk', 2500)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+        
+        <div class="related-box">
+            <img src="manali-1.jpg" alt="Manali Adventure">
+            <div class="related-content">
+                <h4>Manali Adventure</h4>
+                <div class="related-price">Rs 5500 <span>Rs 7500</span></div>
+                <div class="related-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <small>(178 reviews)</small>
+                </div>
+                <button class="btn related-btn" onclick="addToCart('Manali Adventure', 5500)">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Floating Cart Button -->
+<button class="floating-cart-btn" id="floating-cart-btn" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count" id="cart-count">0</span>
+</button>
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">about us</h3>
+            <p>There’s so much information out there to wade through, poor quality recommendations mixed in with good, and it’s hard to know who to trust in an era of AI and fake reviews.</p>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">branch location</h3>
+            <a href="#">india</a>
+        </div>
+        <div class="box">
+            <h3 style="color: rgb(226, 13, 145);">quick links</h3>
+            <a href="FEE PROJECT.HTML#home">home</a>
+            <a href="packages.html">packages</a>
+            <a href="services.html">services</a>
+            <a href="gallery.html">gallery</a>
+            <a href="review.html">review</a>
+            <a href="contact.html">contact</a>
+        </div>
+    </div>
+    <h1 class="credit">created by <span> Harsehej Nakul Ishika</span> All rights reserved</h1>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
